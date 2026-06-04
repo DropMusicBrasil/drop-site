@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Arquivos de apoio (não precisam ser indexados)
+Disallow: /tweaks-panel.jsx
+Disallow: /drop-site-tweaks.jsx
+
+Sitemap: https://dropmusicbrasil.com.br/sitemap.xml

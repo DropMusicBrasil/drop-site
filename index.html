@@ -1,0 +1,892 @@
+<!doctype html>
+<!--
+  ════════════════════════════════════════════════════════════════
+  SITE OFICIAL — DROP MUSIC BRASIL
+  Plataforma cultural de house music · Salvador · desde 2013
+  ----------------------------------------------------------------
+  COMO ESTE ARQUIVO FUNCIONA (para quem não programa):
+  • Este é o "esqueleto" do site (HTML). Ele só organiza o conteúdo.
+  • A aparência (cores, fontes, espaçamentos) fica no arquivo "drop-site.css".
+  • Cada bloco abaixo começa com um comentário em verde explicando o que é.
+  • Para trocar um TEXTO: ache a frase e edite. Para trocar uma FOTO:
+    troque o nome do arquivo dentro de src="assets/p/....jpg".
+  ════════════════════════════════════════════════════════════════
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ═══ SEO — é o que o Google lê para rankear o site. Título e descrição aparecem na busca. ═══ -->
+<title>Drop Music Brasil · House Music e Cultura Eletrônica em Salvador desde 2013</title>
+<meta name="description" content="Plataforma cultural de house music fundada em Salvador em 2013. Day parties no Lôro, noites de club, curadoria e comunidade. Da Bahia pro Mundo. A frequência continua." />
+<meta name="keywords" content="drop music brasil, house music salvador, festa de música eletrônica salvador, day party salvador, label música eletrônica bahia, club music salvador, afro house salvador, tech house salvador, lôro salvador, evento house music salvador" />
+<meta name="author" content="Drop Music Brasil" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://dropmusicbrasil.com.br/" />
+<link rel="icon" type="image/png" href="assets/symbol-black.png" />
+<!-- SEO local (geo) — ajuda a Drop a aparecer em buscas da região de Salvador -->
+<meta name="geo.region" content="BR-BA" />
+<meta name="geo.placename" content="Salvador, Bahia" />
+<meta name="geo.position" content="-12.9777;-38.5016" />
+<meta name="ICBM" content="-12.9777, -38.5016" />
+<meta name="theme-color" content="#060810" />
+
+<!-- Open Graph — controla a "miniatura" quando o link é compartilhado no WhatsApp/Instagram -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Drop Music Brasil" />
+<meta property="og:title" content="Drop Music Brasil — Da Bahia pro Mundo. A frequência continua." />
+<meta property="og:description" content="Plataforma cultural de house music fundada em Salvador em 2013. Day parties solares, noites de club e uma comunidade de mais de 18 mil pessoas." />
+<meta property="og:url" content="https://dropmusicbrasil.com.br/" />
+<meta property="og:image" content="https://dropmusicbrasil.com.br/assets/p/day-wide.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Drop Music Brasil" />
+<meta name="twitter:description" content="House music & cultura eletrônica em Salvador desde 2013." />
+
+<!-- Dados estruturados (JSON-LD) — "ficha técnica" da marca que o Google entende. Ajuda a aparecer melhor. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://dropmusicbrasil.com.br/#org",
+  "name": "Drop Music Brasil",
+  "alternateName": ["Drop", "Drop Music"],
+  "url": "https://dropmusicbrasil.com.br",
+  "logo": "https://dropmusicbrasil.com.br/assets/symbol-black.png",
+  "description": "Plataforma cultural de house music fundada em Salvador em 2013 por Avinho AP e Thiago Becker (dupla Double Impact). Ceuta entra como sócio na retomada de 2018.",
+  "foundingDate": "2013-10-11",
+  "founder": [
+    { "@type": "Person", "name": "Avinho AP" },
+    { "@type": "Person", "name": "Thiago Becker" }
+  ],
+  "member": [
+    { "@type": "Person", "name": "Ceuta" },
+    { "@type": "Person", "name": "João Victor" },
+    { "@type": "Person", "name": "Ianique Costa" },
+    { "@type": "Person", "name": "Vilhena" }
+  ],
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Municipal Lounge Bar, Salvador",
+    "address": { "@type": "PostalAddress", "addressLocality": "Salvador", "addressRegion": "BA", "addressCountry": "BR" }
+  },
+  "knowsAbout": ["House", "Tech House", "Afro House", "Deep House", "Minimal", "Progressive", "Cultura club"],
+  "slogan": "Da Bahia pro Mundo. A frequência continua.",
+  "sameAs": [
+    "https://instagram.com/dropmusicbrasil",
+    "https://soundcloud.com/dropmusicbrazil",
+    "https://www.youtube.com/@DROPMUSICBRASIL",
+    "https://www.facebook.com/dropmusicssa"
+  ]
+}
+</script>
+
+<!-- Dados do próximo evento (MusicEvent) — pode fazer a Drop aparecer com data/local na busca do Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "Drop no Lôro · Ciclo Solar",
+  "description": "Day party de house music da Drop Music Brasil à beira-mar, na Barraca do Lôro, em Stella Maris, Salvador.",
+  "startDate": "2026-07",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Barraca do Lôro",
+    "address": { "@type": "PostalAddress", "addressLocality": "Salvador", "addressRegion": "BA", "addressCountry": "BR" }
+  },
+  "performer": [
+    { "@type": "MusicGroup", "name": "Avinho AP" },
+    { "@type": "MusicGroup", "name": "Ceuta" },
+    { "@type": "MusicGroup", "name": "Vilhena" }
+  ],
+  "organizer": { "@type": "Organization", "name": "Drop Music Brasil", "url": "https://dropmusicbrasil.com.br" },
+  "genre": ["House", "Tech House", "Afro House"]
+}
+</script>
+
+<!-- Fontes do Google: Syne (títulos), Instrument Serif (itálico de ênfase), Geist (texto), Geist Mono (etiquetas técnicas) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Folha de estilo: TODA a aparência do site está no arquivo abaixo -->
+<link rel="stylesheet" href="drop-site.css" />
+
+<!-- React + Babel: usados SÓ pelo painel de ajustes (Tweaks). O site em si é HTML puro. -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MENU DO TOPO (NAV) — fica fixo no topo. Logo à esquerda, links à direita.
+     O link verde "Comunidade" leva direto pro grupo de WhatsApp.
+     ═══════════════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-logo" aria-label="Drop Music Brasil — Início">
+    <img src="assets/lockup-white.png" alt="Drop Music Brasil" class="nav-lockup" />
+    <span class="nav-brand-text">Drop Music Brasil</span>
+  </a>
+  <div class="nav-links">
+    <a href="#manifesto">manifesto</a>
+    <a href="#historia">história</a>
+    <a href="#dropcast">som</a>
+    <a href="#agenda">agenda</a>
+    <a href="temporada.html">temporada</a>
+    <a href="#imprensa">imprensa</a>
+    <a href="#marcas">para marcas</a>
+    <a href="#comunidade" class="nav-cta">Comunidade →</a>
+  </div>
+  <!-- Botão do menu no celular (hambúrguer). Abre o painel .nav-mobile abaixo. -->
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Painel de menu para celular (escondido por padrão; abre ao tocar no hambúrguer) -->
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <a href="#manifesto">Manifesto</a>
+  <a href="#historia">História</a>
+  <a href="#dropcast">Som · DropCast</a>
+  <a href="#agenda">Agenda</a>
+  <a href="temporada.html">Temporada no Lôro</a>
+  <a href="#imprensa">Imprensa</a>
+  <a href="#marcas">Para marcas</a>
+  <a href="#comunidade" class="nav-mobile-cta">Entrar na Comunidade →</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO — a primeira tela. Foto solar da praia (Lôro) ocupando tudo,
+     com o título gigante "Da Bahia pro Mundo" e 3 botões de ação.
+     ═══════════════════════════════════════════════════════════════ -->
+<header class="hero" id="top">
+  <!-- Foto de fundo do hero (troque o arquivo aqui se quiser outra capa) -->
+  <div class="hero-bg"><img src="assets/p/new-solar-djs.jpg" alt="DJs da Drop Music Brasil tocando à beira-mar no Lôro, Salvador, com céu azul e o mar ao fundo" fetchpriority="high" /></div>
+  <!-- Camada escura por cima da foto, pra deixar o texto legível -->
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <!-- Etiquetas pequenas (cidade, ano, gênero) -->
+    <div class="hero-meta">
+      <span><b>Salvador · BA</b></span>
+      <span>Desde <b>2013</b></span>
+      <span><b>House Music</b> &amp; cultura eletrônica</span>
+    </div>
+    <!-- Nome da marca como TEXTO REAL (importante pro Google) + título visual -->
+    <h1 class="hero-h"><span class="hero-brand">Drop Music Brasil</span>Da Bahia<br /><em>pro Mundo.</em></h1>
+    <p class="hero-sub">
+      <strong>Drop Music Brasil</strong> é uma plataforma cultural de <strong>house music</strong> fundada em Salvador em 2013.
+      Do sol da beira-mar à escuridão do club. <em>Mais que uma festa, uma frequência</em>.
+    </p>
+    <!-- Botões: público (drops / comunidade) e marcas -->
+    <div class="hero-ctas">
+      <a href="#agenda" class="btn btn-primary">Próximos drops <span class="arr">→</span></a>
+      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Entrar na comunidade <span class="arr">→</span></a>
+      <a href="#marcas" class="btn btn-ghost">Para marcas</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FAIXA SOLAR — tira de fotos das edições à beira-mar passando em loop.
+     É o "banco de imagens" do clima dia/solar. Para adicionar fotos,
+     copie uma linha <img> e troque o nome do arquivo.
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="zone zone-night solar-wrap" aria-label="Edições solares da Drop no Lôro">
+  <div class="solar-strip">
+    <div class="solar-track">
+      <img src="assets/p/day-wide.jpg" alt="Drop no Lôro — pista à beira-mar" loading="lazy" />
+      <img src="assets/p/new-solar-djs.jpg" alt="DJs da Drop no arco do Lôro com o mar ao fundo" loading="lazy" />
+      <img src="assets/p/day-palmtree.jpg" alt="Pôr do sol e coqueiros em day party da Drop" loading="lazy" />
+      <img src="assets/p/new-solar-women.jpg" alt="DropLovers em edição solar no Lôro" loading="lazy" />
+      <img src="assets/p/day-djs-decks.jpg" alt="DJs tocando à beira-mar no Lôro" loading="lazy" />
+      <img src="assets/p/new-solar-portrait.jpg" alt="DropLover com o mar de Stella Maris ao fundo" loading="lazy" />
+      <img src="assets/p/day-ocean.jpg" alt="Mar de Stella Maris durante day party" loading="lazy" />
+      <img src="assets/p/day-djs-arms.jpg" alt="Pista solar da Drop de braços para o alto" loading="lazy" />
+      <img src="assets/p/new-night-booth.jpg" alt="Cabine de DJ da Drop no fim de tarde no Lôro" loading="lazy" />
+      <img src="assets/p/day-crowd-1.jpg" alt="Público da Drop em edição à beira-mar" loading="lazy" />
+      <!-- cópia da sequência (necessária para o loop ficar contínuo) -->
+      <img src="assets/p/day-wide.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/new-solar-djs.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/day-palmtree.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/new-solar-women.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/day-djs-decks.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/new-solar-portrait.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/day-ocean.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/day-djs-arms.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/new-night-booth.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <img src="assets/p/day-crowd-1.jpg" alt="" aria-hidden="true" loading="lazy" />
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MARQUEE — frase com os gêneros musicais passando de lado a lado.
+     Reforça o que a Drop toca (bom para SEO e clima).
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="zone zone-night">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>House</span><span class="dot">✲</span><span>Tech House</span><span class="dot">✲</span><span>UNDERGROUND</span><span class="dot">✲</span><span>Deep House</span><span class="dot">✲</span><span>A Noite Vive</span><span class="dot">✲</span><span>Da Bahia pro Mundo</span><span class="dot">✲</span>
+      <span>House</span><span class="dot">✲</span><span>Tech House</span><span class="dot">✲</span><span>UNDERGROUND</span><span class="dot">✲</span><span>Deep House</span><span class="dot">✲</span><span>A Noite Vive</span><span class="dot">✲</span><span>Da Bahia pro Mundo</span><span class="dot">✲</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MANIFESTO — o "porquê" da marca (filosofia, não história).
+     É uma declaração grande sobre uma FOTO de fundo. A história
+     (datas, fundadores) fica na seção 03 (Trajetória).
+     Para trocar a foto de fundo: edite o src da .manifesto-bg.
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone manifesto-zone" id="manifesto">
+  <div class="manifesto-bg"><img src="assets/p/club-arms-up.jpg" alt="" aria-hidden="true" loading="lazy" /></div>
+  <div class="manifesto-scrim"></div>
+  <div class="wrap manifesto-inner">
+    <div class="sec-head reveal">
+      <span class="kicker">01 · Manifesto</span>
+      <h2 class="h-sec">Não vendemos ingresso.<br />Vendemos uma <em>frequência.</em></h2>
+    </div>
+    <div class="manifesto-grid">
+      <div class="manifesto-body reveal">
+        <p class="lead">House music é o meio. O encontro é o fim: aquele instante em que a pista respira junto e ninguém quer que acabe.</p>
+        <p>Por isso a curadoria sempre veio antes do nome no cartaz. Por isso o warmup importa tanto quanto o pico. A Drop nunca foi sobre quem está na cabine, e sim sobre o que acontece quando as luzes baixam e a frequência toma conta.</p>
+        <p>Treze anos provando que som com intenção vira comunidade. <em>Da Bahia pro Mundo</em>, e de volta pra pista, toda vez.</p>
+      </div>
+      <ul class="principles reveal">
+        <li><span class="pn">01</span><span>A curadoria vem antes do line-up</span></li>
+        <li><span class="pn">02</span><span>A pista é protagonista</span></li>
+        <li><span class="pn">03</span><span>A música conduz a noite</span></li>
+        <li><span class="pn">04</span><span>Warmup importa. A construção importa.</span></li>
+        <li><span class="pn">05</span><span>Energia coletiva &gt; status</span></li>
+        <li><span class="pn">06</span><span>Da Bahia pro Mundo: raiz local, ambição global</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     QUEM SOMOS — as pessoas. Em destaque (com foto): Avinho AP
+     (co-fundador) e Ceuta (sócio e principal rosto da marca nas redes).
+     Thiago Becker é creditado como co-fundador no texto, sem card grande.
+     Depois: sócios e residentes 2026.
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone zone-night" id="quem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">02 · Quem somos</span>
+      <h2 class="h-sec">O coração da Drop<br /><em>são pessoas.</em></h2>
+      <p class="lede">Três residentes na cabine, um time pequeno nos bastidores e uma tribo inteira na pista. É disso que a Drop é feita hoje.</p>
+    </div>
+
+    <!-- O coração da marca hoje: dois residentes (com foto) + a comunidade na pista -->
+    <div class="heart-grid reveal">
+      <article class="heart-card">
+        <img src="assets/p/portrait-avinho.jpg" alt="Avinho AP, co-fundador e DJ residente da Drop Music Brasil" loading="lazy" />
+        <div class="heart-cap">
+          <span class="heart-role">Co-fundador · residente</span>
+          <span class="heart-name">Avinho AP</span>
+          <span class="heart-note">Desde a primeira noite, em 2013. Direção criativa e curadoria.</span>
+        </div>
+      </article>
+      <article class="heart-card">
+        <img src="assets/p/portrait-ceuta.jpg" alt="Ceuta, sócio, DJ residente e principal rosto da Drop Music Brasil nas redes" loading="lazy" />
+        <div class="heart-cap">
+          <span class="heart-role">Sócio · residente</span>
+          <span class="heart-name">Ceuta</span>
+          <span class="heart-note">Entrou em 2018, na retomada. O principal rosto da marca nas redes sociais e curadoria.</span>
+        </div>
+      </article>
+      <article class="heart-card heart-card-crowd">
+        <img src="assets/p/new-solar-women.jpg" alt="DropLovers, a comunidade que é o coração da Drop Music Brasil" loading="lazy" />
+        <div class="heart-cap">
+          <span class="heart-role">A pista</span>
+          <span class="heart-name">DropLovers</span>
+          <span class="heart-note">A tribo que volta sempre, traz amigos e carrega a marca. O verdadeiro coração da Drop.</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- Sócios (sem funções individuais) + residentes do ano -->
+    <div class="people-row reveal">
+      <div class="prow-head"><span class="kicker">Sócios</span></div>
+      <div class="prow-list">
+        <span class="nm">Avinho AP</span>
+        <span class="nm">Ceuta</span>
+        <span class="nm">João Victor</span>
+        <span class="nm">Ianique Costa</span>
+        <span class="nm">Vilhena</span>
+      </div>
+      <div class="prow-list">
+        <span class="kicker" style="margin-bottom:8px;">Residentes 2026</span>
+        <span class="nm">Avinho AP</span>
+        <span class="nm">Ceuta</span>
+        <span class="nm">Vilhena</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TRAJETÓRIA — linha do tempo. Vai escurecendo (clima entra na noite).
+     Cada item: ano + título + onde aconteceu + descrição.
+     A bolinha que pisca marca "onde estamos agora" (2026).
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone zone-deep" id="historia">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">03 · Trajetória</span>
+      <h2 class="h-sec">Treze anos.<br /><em>A mesma frequência.</em></h2>
+      <p class="lede">Da primeira noite no Municipal Lounge ao retorno solar no Lôro. Marcos reais de uma marca que atravessou hiatos, pandemia e reinvenções.</p>
+    </div>
+
+    <ol class="tl">
+      <li class="tl-item reveal">
+        <span class="tl-yr">2013</span>
+        <div class="tl-body">
+          <h3 class="tl-title">Onde tudo <em>começou.</em></h3>
+          <p class="tl-meta">11.out.2013 · Municipal Lounge Bar · Salvador</p>
+          <p class="tl-desc"><strong>Avinho AP e Thiago Becker</strong>, como dupla Double Impact, assinam a primeira edição. Headliner: <em>Anne Louise a.k.a Charlotte Live Drums</em>. Junto nasce a série de DropCasts semanais. Comunidade antes das redes virarem campo de batalha.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-yr">2016</span>
+        <div class="tl-body">
+          <h3 class="tl-title">A última festa antes do hiato.</h3>
+          <p class="tl-meta">Headliner: Jean Bacarreza</p>
+          <p class="tl-desc">Edição marcante do underground eletrônico em Salvador. Depois dela, a Drop entra em pausa estratégica.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-yr">2018<br />’19</span>
+        <div class="tl-body">
+          <h3 class="tl-title">A <em>retomada.</em></h3>
+          <p class="tl-meta">Ceuta entra como sócio · Bombar Rio Vermelho vira casa</p>
+          <p class="tl-desc">Seis edições em Salvador e Feira de Santana com <strong>Nicolau Marinho</strong>, LOthief e time local. Comunicação reconstruída, <strong>15+ portais</strong> de cobertura.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-yr">2020</span>
+        <div class="tl-body">
+          <h3 class="tl-title">Pandemia. O som <em>não pára.</em></h3>
+          <p class="tl-meta">Drop Music Live · Weekend Stay Home</p>
+          <p class="tl-desc">Camarote oficial de <strong>Léo Santana</strong> com Slow Motion na quarta de cinzas. E dois festivais online: <strong>60+ artistas</strong>, <strong>40h de transmissão</strong>, arrecadando para o NASPEC e o NACCI.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-yr">2021</span>
+        <div class="tl-body">
+          <h3 class="tl-title">Oito anos. Hype Bar.</h3>
+          <p class="tl-meta">19.dez.2021 · +1.200 pessoas</p>
+          <p class="tl-desc"><strong>Gabe</strong> e <strong>Ra7a</strong> como headliners. A maior edição da história da Drop até então. A volta presencial pós-pandemia.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-yr">2024</span>
+        <div class="tl-body">
+          <h3 class="tl-title">A Drop fora da Bahia.</h3>
+          <p class="tl-meta">São Paulo · Lapa Lapa</p>
+          <p class="tl-desc">Jam Sessions em SP com <strong>Victor Alc</strong>. A primeira vez da marca fora do seu território de origem.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <span class="tl-yr">2025</span>
+        <div class="tl-body">
+          <h3 class="tl-title">Ciclo noturno. <em>Sold out.</em></h3>
+          <p class="tl-meta">Bombar Rio Vermelho · produto local no centro</p>
+          <p class="tl-desc"><strong>Nicolau Marinho</strong> (Groove Infinito) e <strong>André Gazolla</strong> em long set de 2h30 (Ressonância Progressiva). Última edição no Bombar recebeu <strong>Nocapz</strong>. Todas as edições do ciclo: <em>sold out</em>.</p>
+        </div>
+      </li>
+      <li class="tl-item tl-current reveal">
+        <span class="tl-yr">2026<br />→</span>
+        <div class="tl-body">
+          <h3 class="tl-title">A frequência <em>continua.</em></h3>
+          <p class="tl-meta">Drop Club na ECO · retorno solar ao Lôro</p>
+          <p class="tl-desc">Estreia na ECO (Rio Vermelho) com Vilhena como novo residente. Em breve temos novidades seguindo na mesma frequência.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ONDE COMEÇOU (TBT) — bloco de memória/legado no lugar dos "números".
+     Tom institucional: a primeira edição e 2016 (Jean Bacarreza), com
+     fotos históricas. Para trocar as fotos: edite os src abaixo.
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone zone-deep" id="legado">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Onde começou</span>
+      <h2 class="h-sec">Treze anos atrás,<br />numa pista <em>lotada de fé.</em></h2>
+      <p class="lede">A Drop nunca foi sobre números. É sobre o que acontece com as pessoas quando a música certa toca na hora certa. E isso já acontece há mais de uma década.</p>
+    </div>
+
+    <div class="tbt reveal">
+      <figure class="tbt-feature">
+        <img src="assets/p/tbt-primeira-edicao.jpg" alt="Pista emocionada na primeira edição da Drop Music Brasil em 2013, em preto e branco" loading="lazy" />
+        <figcaption>
+          <span class="tbt-year">2013</span>
+          <p>A primeira edição. A pista que começou tudo, ainda sem saber que viraria uma história de treze anos.</p>
+        </figcaption>
+      </figure>
+      <figure class="tbt-side">
+        <img src="assets/p/tbt-jean-2016.jpg" alt="Jean Bacarreza tocando na edição de 2016 da Drop Music Brasil" loading="lazy" />
+        <figcaption>
+          <span class="tbt-year">2016</span>
+          <p>Jean Bacarreza na cabine. Uma das edições mais marcantes antes do hiato.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <p class="tbt-note reveal">Mais de uma década depois, a mesma frequência: comunidade de <strong>18 mil pessoas</strong>, dezenas de artistas, presença na imprensa e na agenda cultural de Salvador. <a href="#historia">Ver a trajetória completa ↑</a></p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     A NOITE VIVE — clima de club (fundo escuro + neon azul).
+     Mosaico de fotos + cards de experiência + botão do aftermovie (YouTube).
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone zone-deep" id="experiencia">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">04 · A experiência</span>
+      <h2 class="h-sec">A noite <em>vive.</em></h2>
+      <p class="lede">A Drop não vende horas de música. Vende um estado: a sensação de que o tempo parou e você está exatamente onde deveria estar.</p>
+    </div>
+
+    <!-- Mosaico de fotos noturnas -->
+    <div class="night-mosaic reveal">
+      <div class="nm tall"><img src="assets/p/club-arms-up.jpg" alt="Pista da Drop Music Brasil em noite de club" loading="lazy" /></div>
+      <div class="nm wide"><img src="assets/p/new-night-booth.jpg" alt="Cabine de DJ da Drop com luzes neon e o mar ao fundo" loading="lazy" /></div>
+      <div class="nm"><img src="assets/p/club-laughing.jpg" alt="Público da Drop Music Brasil" loading="lazy" /></div>
+      <div class="nm"><img src="assets/p/club-crowd.jpg" alt="Pista lotada em edição noturna da Drop" loading="lazy" /></div>
+      <div class="nm wide"><img src="assets/p/club-arms-up.jpg" alt="Energia da pista em edição da Drop" loading="lazy" /></div>
+      <div class="nm"><img src="assets/p/club-cap.jpg" alt="DropLover em edição da Drop Music Brasil" loading="lazy" /></div>
+    </div>
+
+    <div class="exp-grid">
+      <!-- Cards de "o que faz a Drop ser Drop" + citação -->
+      <div class="exp-cards reveal">
+        <div class="exp-card">
+          <h3>Curadoria</h3>
+          <p>House, tech house e afro house selecionados com critério. A curadoria define o evento, não o contrário.</p>
+        </div>
+        <div class="exp-card">
+          <h3>Produto local</h3>
+          <p>A Drop sempre apostou em artistas baianos. <strong>Nocapz</strong> tocou na última edição no Bombar antes da mudança pro Lôro. Dar palco ao produto local faz parte do DNA da marca.</p>
+        </div>
+        <div class="exp-card">
+          <h3>Estética &amp; identidade</h3>
+          <p>Material audiovisual profissional em todas as edições. Conteúdo que circula naturalmente nas redes, sem parecer publicidade.</p>
+        </div>
+        <div class="night-quote">
+          <p>"Os DropLovers não são público, são tribo. Voltam, trazem amigos, geram conteúdo e defendem a marca nas redes."</p>
+          <cite>Drop Music Brasil · Da Bahia pro Mundo</cite>
+        </div>
+      </div>
+      <!-- Card grande do aftermovie. Clica e o vídeo do YouTube carrega AQUI (inline),
+           sem sair do site. Para trocar o vídeo: mude o ID em data-yt. -->
+      <div class="reveal">
+        <div class="aftermovie" id="aftermovie" data-yt="y2I4EBNmxWA">
+          <button class="am-thumb" type="button" aria-label="Reproduzir o aftermovie da Drop Music Brasil">
+            <img src="https://i.ytimg.com/vi/y2I4EBNmxWA/maxresdefault.jpg" alt="Aftermovie da Drop Music Brasil" loading="lazy" onerror="this.onerror=null;this.src='assets/p/club-arms-up.jpg';" />
+            <span class="am-badge"><i></i> Aftermovie</span>
+            <span class="am-play"><svg viewBox="0 0 20 20"><path d="M6 4.5l11 5.5-11 5.5z" /></svg></span>
+          </button>
+          <div class="am-info">
+            <h3>Aftermovie · Drop Music Brasil</h3>
+            <p>Veja uma edição por dentro: a energia, a pista e a experiência que nenhuma descrição substitui.</p>
+            <span class="am-link">Dê play para assistir aqui →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     AGENDA — sem spoiler de datas. Os dois formatos da Drop (Lôro solar
+     e Club noturno) ficam visíveis como conceito, mas as datas ficam
+     "em breve" até serem anunciadas oficialmente.
+     ═══════════════════════════════════════════════════════════════ -->
+<!-- DROPCAST · player do SoundCloud tocando os sets da casa -->
+<section class="zone zone-night" id="dropcast">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Som · DropCast</span>
+      <h2 class="h-sec">Coloca no fone.<br /><em>A Drop tocando agora.</em></h2>
+      <p class="lede">Os sets e DropCasts da casa, direto do nosso SoundCloud. Dá play e leva a frequência com você.</p>
+    </div>
+    <div class="player reveal">
+      <iframe title="DropCast da Drop Music Brasil no SoundCloud" width="100%" height="450" frameborder="no" scrolling="no" allow="autoplay" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dropmusicbrazil&color=%232e5bff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true"></iframe>
+    </div>
+    <p class="player-link"><a href="https://soundcloud.com/dropmusicbrazil" target="_blank" rel="noopener">Seguir no SoundCloud ↗</a></p>
+  </div>
+</section>
+
+<section class="zone zone-night" id="agenda">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">05 · Agenda</span>
+      <h2 class="h-sec">Uma temporada,<br />não um evento <em>avulso.</em></h2>
+      <p class="lede">A Drop pensa em calendário. Do ciclo noturno no club ao ciclo solar no Lôro, a marca acompanha o ano inteiro, com o verão como ponto alto.</p>
+    </div>
+
+    <!-- Status da agenda: em construção (sem revelar datas ainda) -->
+    <div class="agenda-status reveal">
+      <span class="as-dot"></span>
+      <span class="as-text">Calendário <strong>em construção</strong>. As próximas datas serão anunciadas em primeira mão para a comunidade.</span>
+    </div>
+
+    <!-- Os dois ciclos da temporada (conceito, sem revelar datas/line-up) -->
+    <div class="cycles reveal">
+      <article class="cycle cycle-solar">
+        <span class="cycle-tag">Ciclo Solar</span>
+        <h3 class="cycle-name">Drop no Lôro</h3>
+        <p class="cycle-desc">Day party à beira-mar em Stella Maris. Sol, mar e house do fim da tarde ao pôr do sol.</p>
+        <span class="cycle-when">Datas a anunciar · em breve</span>
+      </article>
+      <article class="cycle cycle-club">
+        <span class="cycle-tag">Ciclo Club</span>
+        <h3 class="cycle-name">Drop Club</h3>
+        <p class="cycle-desc">A noite imersiva, na ECO e no Rio Vermelho. Escuro, neon e a pista no escuro até o fim.</p>
+        <span class="cycle-when">Datas a anunciar · em breve</span>
+      </article>
+    </div>
+
+    <!-- Teaser de suspense (FOMO): sem datas, sem line-up. A pré-venda é o único caminho. -->
+    <div class="fomo reveal">
+      <div class="fomo-main">
+        <span class="fomo-kicker"><span class="fomo-dot"></span> Próximo drop · em segredo</span>
+        <h3 class="fomo-h">Algo está sendo construído<br />para o <em>verão.</em></h3>
+        <p>Quem está na comunidade descobre a data, o line-up e a pré-venda antes de todo mundo. Quando a Drop abre, esgota. Não diga que a gente não avisou.</p>
+      </div>
+      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Quero saber primeiro <span class="arr">→</span></a>
+    </div>
+
+    <p class="agenda-note">
+      &gt; A Drop não anuncia data aqui. Tudo sai primeiro na <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="link-wa">comunidade DropLovers</a> e no <a href="https://instagram.com/dropmusicbrasil" target="_blank" rel="noopener" class="link-ig">@dropmusicbrasil</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     IMPRENSA — onde a Drop já apareceu. Fundo claro (volta o "dia").
+     Cada card é um link real para a matéria.
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone zone-day" id="imprensa">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">06 · Imprensa</span>
+      <h2 class="h-sec">A Drop <em>na mídia.</em></h2>
+      <p class="lede">Treze anos de cobertura: de portais especializados à Rede Bahia / Globo e ao portal oficial de turismo de Salvador.</p>
+    </div>
+    <div class="clips reveal">
+      <a class="clip feat" href="https://redeglobo.globo.com/redebahia/tarolando/noticia/drop-music-brasil-acontece-no-dia-158-em-salvador.ghtml" target="_blank" rel="noopener">
+        <span class="clip-src">Rede Bahia · Globo</span>
+        <span class="clip-txt">O maior grupo de comunicação do Brasil</span>
+        <span class="clip-arr">abrir ↗</span>
+      </a>
+      <a class="clip feat" href="https://www.salvadordabahia.com/eventos/drop-music-brasil-brisa-groove-carnaval/" target="_blank" rel="noopener">
+        <span class="clip-src">Salvador da Bahia <em>oficial</em></span>
+        <span class="clip-txt">Portal oficial de turismo de Salvador</span>
+        <span class="clip-arr">abrir ↗</span>
+      </a>
+      <a class="clip" href="http://agendacultural.ba.gov.br/drop-music-brasil/" target="_blank" rel="noopener">
+        <span class="clip-src">Agenda Cultural Bahia</span>
+        <span class="clip-txt">Portal cultural do Governo da Bahia</span>
+        <span class="clip-arr">abrir ↗</span>
+      </a>
+      <a class="clip" href="https://doistercos.com.br/drop-music-brasil-apresenta-groove-infinito-com-estreia-de-nicolau-marinho-no-bombar/" target="_blank" rel="noopener">
+        <span class="clip-src">Dois Terços</span>
+        <span class="clip-txt">Groove Infinito · Nicolau Marinho no Bombar</span>
+        <span class="clip-arr">abrir ↗</span>
+      </a>
+      <a class="clip" href="https://www.uranrodrigues.com/drop-music-brasil-realiza-edicao-ressonancia-progressiva-com-estreia-de-andre-gazolla-no-selo/" target="_blank" rel="noopener">
+        <span class="clip-src">Uran Rodrigues</span>
+        <span class="clip-txt">Ressonância Progressiva · André Gazolla</span>
+        <span class="clip-arr">abrir ↗</span>
+      </a>
+      <a class="clip" href="https://vibes.vc/eventos/drop-music-brasil/" target="_blank" rel="noopener">
+        <span class="clip-src">Vibes · iBahia</span>
+        <span class="clip-txt">Portal líder de eventos em Salvador</span>
+        <span class="clip-arr">abrir ↗</span>
+      </a>
+      <a class="clip" href="http://www.phouse.com.br/drop-music-esta-de-volta-salvador/" target="_blank" rel="noopener">
+        <span class="clip-src">PHouse</span>
+        <span class="clip-txt">"A Drop está de volta a Salvador"</span>
+        <span class="clip-arr">abrir ↗</span>
+      </a>
+      <a class="clip" href="https://ginnolarry.com.br/festa-drop-music-brasil-chega-ao-bombar/" target="_blank" rel="noopener">
+        <span class="clip-src">Ginno Larry</span>
+        <span class="clip-txt">A chegada da Drop ao Bombar</span>
+        <span class="clip-arr">abrir ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PARA MARCAS — área comercial enxuta (fundo areia). Sem preços:
+     mostra a oportunidade + o que a marca ganha + botão que pede o deck.
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone zone-sand" id="marcas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">07 · Para marcas</span>
+      <h2 class="h-sec">Patrocinar a Drop não é<br />comprar espaço. <em>É entrar num momento.</em></h2>
+      <p class="lede">Marcas que se associam a experiências culturais autênticas constroem o que mídia paga não replica: memória emocional. A Drop entrega isso de forma recorrente, ao longo de toda a temporada.</p>
+    </div>
+
+    <!-- QUEM FREQUENTA — perfil institucional (defensável, sem dados demográficos não comprovados) -->
+    <div class="audience reveal">
+      <span class="audience-h">Quem frequenta a Drop</span>
+      <div class="audience-grid">
+        <div class="aud"><b>Cena</b><span>público de house music, fiel e recorrente</span></div>
+        <div class="aud"><b>Local</b><span>Salvador e região metropolitana</span></div>
+        <div class="aud"><b>Digital</b><span>alto engajamento e geração de conteúdo</span></div>
+        <div class="aud"><b>Lealdade</b><span>volta a cada edição e traz gente nova</span></div>
+      </div>
+      <p class="audience-note">Um público que valoriza curadoria e experiência acima de hype. Gente que descobre e adota marcas cedo, compartilha o que vive e constrói o boca a boca que nenhuma mídia paga reproduz.</p>
+    </div>
+
+    <div class="brand-grid">
+      <!-- OPORTUNIDADES — formatos concretos de ativação -->
+      <div class="brand-gains reveal">
+        <div class="gain"><span class="gn">01</span><div><h4>Naming rights</h4><p>Sua marca no nome da edição ou do palco. A associação mais forte: a marca vira parte do nome que o público repete.</p></div></div>
+        <div class="gain"><span class="gn">02</span><div><h4>Experiências &amp; ativações</h4><p>Lounge de marca, sampling, bar assinado, espaço instagramável. Contato físico com um público no estado de espírito certo.</p></div></div>
+        <div class="gain"><span class="gn">03</span><div><h4>Conteúdo</h4><p>Produção audiovisual profissional com a marca dentro da cena: fotos, reels e aftermovie que circulam organicamente.</p></div></div>
+        <div class="gain"><span class="gn">04</span><div><h4>Acesso aos DropLovers</h4><p>Presença na comunidade de +18 mil pessoas e na base de e-mail. Canal direto com o público, sem depender de algoritmo.</p></div></div>
+      </div>
+
+      <!-- Citação + cotas (sem valor) + botão que pede o MEDIA KIT -->
+      <aside class="brand-aside reveal">
+        <p class="brand-quote">"A marca não compra exposição. Compra presença dentro de um <em>ritual de verão.</em>"</p>
+        <div class="brand-cotas">
+          Dois formatos de entrada: Cota Headliner (naming &amp; presença total) e Cota Apoio (visibilidade &amp; relacionamento). Valores e entregas <strong>sob consulta</strong>, co-criados com cada marca.
+        </div>
+        <a href="mailto:dropmusicbrazil@gmail.com?subject=Media%20Kit%20%E2%80%94%20Drop%20Music%20Brasil&body=Ol%C3%A1%2C%20Drop!%20Somos%20a%20marca%20_______%20e%20gostar%C3%ADamos%20de%20receber%20o%20media%20kit%20da%20temporada." class="btn btn-solar">Receber o Media Kit <span class="arr">→</span></a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     COMUNIDADE — captura de e-mail (ativo próprio) + WhatsApp.
+     O formulário precisa de um destino: troque a URL em data-endpoint
+     por seu Formspree/Mailchimp. Enquanto não trocar, ele salva o lead
+     no navegador e abre o WhatsApp (nada se perde).
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone zone-night" id="comunidade">
+  <div class="wrap">
+    <div class="community reveal">
+      <div class="community-copy">
+        <span class="kicker">Comunidade Drop</span>
+        <h3>Entre pra <em>tribo.</em></h3>
+        <p>Deixe seu e-mail e receba o que ninguém mais recebe primeiro:</p>
+        <ul class="community-perks">
+          <li>Pré-vendas antes de abrir pro público</li>
+          <li>Line-ups e datas em primeira mão</li>
+          <li>Bastidores e conteúdo exclusivo</li>
+          <li>Acesso antecipado às edições</li>
+        </ul>
+        <p class="community-stat">+18.000 pessoas já estão dentro · Salvador e além</p>
+      </div>
+
+      <div class="community-action">
+        <!-- FORMULÁRIO DE E-MAIL. Para conectar de verdade: crie um form grátis no
+             formspree.io (ou Mailchimp) e cole a URL no data-endpoint abaixo. -->
+        <form class="lead-form" data-endpoint="" novalidate>
+          <label class="lead-label" for="lead-name">Seu nome</label>
+          <input class="lead-input" id="lead-name" name="nome" type="text" autocomplete="name" placeholder="Como te chamam na pista" />
+          <label class="lead-label" for="lead-email">Seu melhor e-mail</label>
+          <input class="lead-input" id="lead-email" name="email" type="email" autocomplete="email" required placeholder="voce@email.com" />
+          <button class="btn btn-primary lead-submit" type="submit">Quero entrar na Comunidade <span class="arr">→</span></button>
+          <p class="lead-msg" role="status" aria-live="polite"></p>
+        </form>
+        <div class="lead-or"><span>ou</span></div>
+        <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa lead-wa">Entrar pelo WhatsApp <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CONTATO — e-mails e redes. Cada card é um link clicável.
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="zone zone-deep" id="contato">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">08 · Contato</span>
+      <h2 class="h-sec">Booking, parcerias<br />&amp; <em>imprensa.</em></h2>
+    </div>
+    <div class="contact-grid reveal">
+      <a class="cc" href="mailto:dropmusicbrazil@gmail.com?subject=Booking%20%E2%80%94%20Drop%20Music%20Brasil">
+        <span class="cc-k">Booking &amp; geral</span>
+        <span class="cc-v">dropmusicbrazil@gmail.com</span>
+        <span class="cc-arr">→</span>
+      </a>
+      <a class="cc" href="mailto:dropmusicbrazil@gmail.com?subject=Imprensa%20%E2%80%94%20Drop%20Music%20Brasil">
+        <span class="cc-k">Imprensa &amp; press kit</span>
+        <span class="cc-v">Solicitar material</span>
+        <span class="cc-arr">→</span>
+      </a>
+      <a class="cc" href="https://instagram.com/dropmusicbrasil" target="_blank" rel="noopener">
+        <span class="cc-k">Instagram</span>
+        <span class="cc-v">@dropmusicbrasil</span>
+        <span class="cc-arr">↗</span>
+      </a>
+      <a class="cc" href="https://soundcloud.com/dropmusicbrazil" target="_blank" rel="noopener">
+        <span class="cc-k">SoundCloud</span>
+        <span class="cc-v">/dropmusicbrazil</span>
+        <span class="cc-arr">↗</span>
+      </a>
+      <a class="cc" href="https://www.youtube.com/@DROPMUSICBRASIL" target="_blank" rel="noopener">
+        <span class="cc-k">YouTube</span>
+        <span class="cc-v">@DROPMUSICBRASIL</span>
+        <span class="cc-arr">↗</span>
+      </a>
+      <a class="cc" href="https://www.facebook.com/dropmusicssa" target="_blank" rel="noopener">
+        <span class="cc-k">Facebook</span>
+        <span class="cc-v">/dropmusicssa</span>
+        <span class="cc-arr">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     RODAPÉ — logo completo (com ®), frase da marca e links.
+     ═══════════════════════════════════════════════════════════════ -->
+<footer class="zone zone-night">
+  <div class="footer">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="assets/lockup-white.png" alt="Drop Music Brasil" class="foot-lockup" />
+        <p class="foot-tag">Da Bahia pro Mundo. A frequência continua.</p>
+      </div>
+      <div class="foot-col">
+        <span class="fh">Navegar</span>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#historia">História</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#imprensa">Imprensa</a>
+        <a href="#marcas">Para marcas</a>
+      </div>
+      <div class="foot-col">
+        <span class="fh">Conectar</span>
+        <a href="https://instagram.com/dropmusicbrasil" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://soundcloud.com/dropmusicbrazil" target="_blank" rel="noopener">SoundCloud</a>
+        <a href="https://www.youtube.com/@DROPMUSICBRASIL" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener">Comunidade WhatsApp</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2013–2026 Drop Music Brasil® · Salvador · Bahia · Brasil</span>
+      <span>House music desde 2013</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Onde o painel de ajustes (Tweaks) é montado. Não mexer. -->
+<div id="tweaks-root"></div>
+
+<!-- ═══ Pequenos scripts: (1) fundo do menu ao rolar; (2) animação de "surgir" das seções ═══ -->
+<script>
+  (function () {
+    var nav = document.getElementById('nav');
+    var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 40); };
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    // ── Aftermovie inline (click-to-load do YouTube) ──
+    var am = document.getElementById('aftermovie');
+    if (am) {
+      var thumb = am.querySelector('.am-thumb');
+      thumb.addEventListener('click', function () {
+        var id = am.getAttribute('data-yt');
+        var f = document.createElement('iframe');
+        f.className = 'am-frame';
+        f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+        f.title = 'Aftermovie da Drop Music Brasil';
+        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        f.setAttribute('allowfullscreen', '');
+        f.setAttribute('frameborder', '0');
+        thumb.replaceWith(f);
+      });
+    }
+    var burger = document.getElementById('navBurger');
+    var mobile = document.getElementById('navMobile');
+    if (burger && mobile) {
+      var setOpen = function (open) {
+        document.body.classList.toggle('nav-open', open);
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        mobile.setAttribute('aria-hidden', open ? 'false' : 'true');
+      };
+      burger.addEventListener('click', function () {
+        setOpen(!document.body.classList.contains('nav-open'));
+      });
+      mobile.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setOpen(false); });
+      });
+      window.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    }
+    // Se data-endpoint estiver preenchido (Formspree/Mailchimp), envia pra lá.
+    // Senão, guarda o lead no navegador e leva pro WhatsApp (nada se perde).
+    var form = document.querySelector('.lead-form');
+    if (form) {
+      var msg = form.querySelector('.lead-msg');
+      var WA = 'https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX';
+      form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var email = form.querySelector('#lead-email');
+        var nome = form.querySelector('#lead-name');
+        var val = (email.value || '').trim();
+        if (!val || val.indexOf('@') < 1 || val.indexOf('.') < 0) {
+          msg.textContent = 'Confere o e-mail, por favor :)';
+          msg.className = 'lead-msg err';
+          email.focus();
+          return;
+        }
+        var endpoint = (form.getAttribute('data-endpoint') || '').trim();
+        var done = function () {
+          form.reset();
+          msg.innerHTML = 'Você está dentro! Confirme a entrada no WhatsApp 👉 <a href="' + WA + '" target="_blank" rel="noopener">abrir grupo</a>';
+          msg.className = 'lead-msg ok';
+          window.open(WA, '_blank', 'noopener');
+        };
+        if (endpoint) {
+          var data = new FormData(form);
+          fetch(endpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+            .then(function () { done(); })
+            .catch(function () {
+              msg.textContent = 'Deu ruim no envio. Entra pelo WhatsApp que a gente te garante.';
+              msg.className = 'lead-msg err';
+            });
+        } else {
+          try {
+            var leads = JSON.parse(localStorage.getItem('drop_leads') || '[]');
+            leads.push({ nome: (nome && nome.value) || '', email: val, at: new Date().toISOString() });
+            localStorage.setItem('drop_leads', JSON.stringify(leads));
+          } catch (e) {}
+          done();
+        }
+      });
+    }
+  })();
+</script>
+
+<!-- Painel de ajustes ao vivo (cores, densidade, mostrar/esconder seções) -->
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="drop-site-tweaks.jsx"></script>
+
+</body>
+</html>
