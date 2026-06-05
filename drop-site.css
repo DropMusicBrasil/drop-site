@@ -387,15 +387,15 @@ body.nav-open { overflow: hidden; }
     scrollbar-width: thin;
     scrollbar-color: var(--rule-l-s) transparent;
   }
-  .tl::before { left: 0; right: 0; top: 46px; bottom: auto; width: auto; height: 1px; }
+  .tl::before { left: 0; right: 0; top: 86px; bottom: auto; width: auto; height: 1px; }
   .tl-item {
     display: block; grid-template-columns: none;
     flex: 0 0 300px; width: 300px;
     gap: 0; padding: 0 28px 0 0; scroll-snap-align: start;
   }
-  .tl-item::before { left: 0; top: 40px; }
-  .tl-yr { text-align: left; padding-top: 0; margin-bottom: 30px; }
-  .tl-body { padding-left: 0; padding-top: 26px; }
+  .tl-item::before { left: 0; top: 80px; }
+  .tl-yr { text-align: left; padding-top: 0; margin: 0; height: 76px; display: flex; align-items: flex-end; line-height: 1.02; }
+  .tl-body { padding-left: 0; padding-top: 30px; }
   .tl-desc { max-width: none; font-size: 14px; }
   .tl-cap { display: block; margin-top: 14px; font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--light-mute); }
 }
