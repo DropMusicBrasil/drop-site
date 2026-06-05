@@ -540,7 +540,7 @@
       <p class="lede">Os sets e DropCasts da casa, direto do nosso SoundCloud. Dá play e leva a frequência com você.</p>
     </div>
     <div class="player reveal">
-      <iframe title="DropCast da Drop Music Brasil no SoundCloud" width="100%" height="450" frameborder="no" scrolling="no" allow="autoplay" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dropmusicbrazil&color=%232e5bff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true"></iframe>
+      <iframe id="sc-player" title="DropCast da Drop Music Brasil no SoundCloud" width="100%" height="450" frameborder="no" scrolling="no" allow="autoplay" loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dropmusicbrazil&color=%232e5bff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true"></iframe>
     </div>
     <p class="player-link"><a href="https://soundcloud.com/dropmusicbrazil" target="_blank" rel="noopener">Seguir no SoundCloud ↗</a></p>
   </div>
@@ -640,12 +640,12 @@
       <h2 class="h-sec">Booking, parcerias<br />&amp; <em>imprensa.</em></h2>
     </div>
     <div class="contact-grid reveal">
-      <a class="cc" href="/cdn-cgi/l/email-protection#ff9b8d908f928a8c969c9d8d9e859693bf98929e9693d19c9092c08c8a9d959a9c8bc2bd909094969198dacdcfdabacddac7cfdac6cbdacdcfbb8d908fdacdcfb28a8c969cdacdcfbd8d9e8c9693">
+      <a class="cc" href="/cdn-cgi/l/email-protection#7014021f001d050319131202110a191c30171d11191c5e131f1d4f0305121a1513044d321f1f1b191e1755424055354255484055494455424034021f005542403d0503191355424032021103191c">
         <span class="cc-k">Booking &amp; geral</span>
-        <span class="cc-v"><span class="__cf_email__" data-cfemail="680c1a0718051d1b010b0a1a09120104280f05090104460b0705">[email&#160;protected]</span></span>
+        <span class="cc-v"><span class="__cf_email__" data-cfemail="0f6b7d607f627a7c666c6d7d6e7566634f68626e6663216c6062">[email&#160;protected]</span></span>
         <span class="cc-arr">→</span>
       </a>
-      <a class="cc" href="/cdn-cgi/l/email-protection#f195839e819c848298929383908b989db1969c90989ddf929e9cce8284939b949285ccb89c8183949f8290d4c3c1d4b4c3d4c9c1d4c8c5d4c3c1b5839e81d4c3c1bc84829892d4c3c1b3839082989d">
+      <a class="cc" href="/cdn-cgi/l/email-protection#57332538273a22243e343525362d3e3b17303a363e3b7934383a682422353d3234236a1e3a272532392436726567721265726f67726e63726567132538277265671a22243e34726567152536243e3b">
         <span class="cc-k">Imprensa &amp; press kit</span>
         <span class="cc-v">Solicitar material</span>
         <span class="cc-arr">→</span>
@@ -802,6 +802,35 @@
 <!-- Painel de ajustes ao vivo (cores, densidade, mostrar/esconder seções) -->
 <script type="text/babel" src="tweaks-panel.jsx"></script>
 <script type="text/babel" src="drop-site-tweaks.jsx"></script>
+
+<!-- DropCast: dá play em volume 0 e sobe o som suavemente (fade-in) 2s após carregar.
+     Obs.: alguns navegadores bloqueiam som automático sem o usuário clicar antes.
+     Se for bloqueado, o player simplesmente espera o play manual (sem erro). -->
+<script src="https://w.soundcloud.com/player/api.js"></script>
+<script>
+  (function () {
+    var iframe = document.getElementById('sc-player');
+    if (!iframe || !window.SC || !SC.Widget) return;
+    var widget = SC.Widget(iframe);
+    var started = false;
+
+    function fadeIn() {
+      if (started) return; started = true;
+      var vol = 0;
+      widget.setVolume(0);
+      widget.play();
+      var step = setInterval(function () {
+        vol += 5;                       // ~4s até 100%
+        widget.setVolume(vol);
+        if (vol >= 100) clearInterval(step);
+      }, 200);
+    }
+
+    widget.bind(SC.Widget.Events.READY, function () {
+      setTimeout(fadeIn, 2000);         // 2 segundos após o player ficar pronto
+    });
+  })();
+</script>
 
 </body>
 </html>
