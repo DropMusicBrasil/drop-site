@@ -128,7 +128,7 @@
      ═══════════════════════════════════════════════════════════════ -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav-logo" aria-label="Drop Music Brasil — Início">
-    <img src="assets/lockup-white.png" alt="Drop Music Brasil" class="nav-lockup" />
+    <img src="assets/lockup-white.png" alt="Drop Music Brasil" class="nav-lockup" style="width: 183px; height: 42px" />
     <span class="nav-brand-text">Drop Music Brasil</span>
   </a>
   <div class="nav-links">
@@ -137,8 +137,8 @@
     <a href="#dropcast">som</a>
     <a href="#agenda">agenda</a>
     <a href="temporada.html">temporada</a>
-    <a href="#imprensa">imprensa</a>
-    <a href="#marcas">para marcas</a>
+    <a href="imprensa.html">imprensa</a>
+    <a href="marcas.html">para marcas</a>
     <a href="#comunidade" class="nav-cta">Comunidade →</a>
   </div>
   <!-- Botão do menu no celular (hambúrguer). Abre o painel .nav-mobile abaixo. -->
@@ -154,8 +154,8 @@
   <a href="#dropcast">Som · DropCast</a>
   <a href="#agenda">Agenda</a>
   <a href="temporada.html">Temporada no Lôro</a>
-  <a href="#imprensa">Imprensa</a>
-  <a href="#marcas">Para marcas</a>
+  <a href="imprensa.html">Imprensa</a>
+  <a href="marcas.html">Para marcas</a>
   <a href="#comunidade" class="nav-mobile-cta">Entrar na Comunidade →</a>
 </div>
 
@@ -189,6 +189,23 @@
     </div>
   </div>
 </header>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TEASER (logo após o hero) — bloco de suspense + CTA pra comunidade.
+     Cria FOMO sem revelar data nem venue. Empurra pro WhatsApp.
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="zone zone-deep">
+  <div class="wrap" style="padding-top: clamp(48px,6vh,80px); padding-bottom: clamp(48px,6vh,80px);">
+    <div class="fomo reveal">
+      <div class="fomo-main">
+        <span class="fomo-kicker"><span class="fomo-dot"></span> Próximo drop · em segredo</span>
+        <h3 class="fomo-h">Algo está sendo construído<br />para o <em>verão.</em></h3>
+        <p>Quem está na comunidade descobre a data, o line-up e a pré-venda antes de todo mundo. Quando a Drop abre, esgota. Não diga que a gente não avisou.</p>
+      </div>
+      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Quero saber primeiro <span class="arr">→</span></a>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════════
      FAIXA SOLAR — tira de fotos das edições à beira-mar passando em loop.
@@ -409,11 +426,9 @@
         </div>
       </li>
     </ol>
+    <p class="tl-scroll-hint">→ arraste para o lado para ver os treze anos</p>
   </div>
 </section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     ONDE COMEÇOU (TBT) — bloco de memória/legado no lugar dos "números".
      Tom institucional: a primeira edição e 2016 (Jean Bacarreza), com
      fotos históricas. Para trocar as fotos: edite os src abaixo.
      ═══════════════════════════════════════════════════════════════ -->
@@ -464,7 +479,7 @@
       <div class="nm wide"><img src="assets/p/new-night-booth.jpg" alt="Cabine de DJ da Drop com luzes neon e o mar ao fundo" loading="lazy" /></div>
       <div class="nm"><img src="assets/p/club-laughing.jpg" alt="Público da Drop Music Brasil" loading="lazy" /></div>
       <div class="nm"><img src="assets/p/club-crowd.jpg" alt="Pista lotada em edição noturna da Drop" loading="lazy" /></div>
-      <div class="nm wide"><img src="assets/p/club-arms-up.jpg" alt="Energia da pista em edição da Drop" loading="lazy" /></div>
+      <div class="nm wide"><img src="assets/p/club-D-tee.jpg" alt="Energia da pista em edição noturna da Drop" loading="lazy" /></div>
       <div class="nm"><img src="assets/p/club-cap.jpg" alt="DropLover em edição da Drop Music Brasil" loading="lazy" /></div>
     </div>
 
@@ -536,141 +551,38 @@
       <p class="lede">A Drop pensa em calendário. Do ciclo noturno no club ao ciclo solar no Lôro, a marca acompanha o ano inteiro, com o verão como ponto alto.</p>
     </div>
 
-    <!-- Status da agenda: em construção (sem revelar datas ainda) -->
+    <!-- Status da agenda: em construção (sem revelar nada de venue/datas) -->
     <div class="agenda-status reveal">
       <span class="as-dot"></span>
-      <span class="as-text">Calendário <strong>em construção</strong>. As próximas datas serão anunciadas em primeira mão para a comunidade.</span>
+      <span class="as-text">Fizemos um primeiro semestre <strong>memorável</strong>. Agora estamos preparando algo sensacional para o próximo. Em breve, novidades na mesma frequência.</span>
     </div>
 
-    <!-- Os dois ciclos da temporada (conceito, sem revelar datas/line-up) -->
-    <div class="cycles reveal">
-      <article class="cycle cycle-solar">
-        <span class="cycle-tag">Ciclo Solar</span>
-        <h3 class="cycle-name">Drop no Lôro</h3>
-        <p class="cycle-desc">Day party à beira-mar em Stella Maris. Sol, mar e house do fim da tarde ao pôr do sol.</p>
-        <span class="cycle-when">Datas a anunciar · em breve</span>
-      </article>
-      <article class="cycle cycle-club">
-        <span class="cycle-tag">Ciclo Club</span>
-        <h3 class="cycle-name">Drop Club</h3>
-        <p class="cycle-desc">A noite imersiva, na ECO e no Rio Vermelho. Escuro, neon e a pista no escuro até o fim.</p>
-        <span class="cycle-when">Datas a anunciar · em breve</span>
-      </article>
-    </div>
-
-    <!-- Teaser de suspense (FOMO): sem datas, sem line-up. A pré-venda é o único caminho. -->
-    <div class="fomo reveal">
-      <div class="fomo-main">
-        <span class="fomo-kicker"><span class="fomo-dot"></span> Próximo drop · em segredo</span>
-        <h3 class="fomo-h">Algo está sendo construído<br />para o <em>verão.</em></h3>
-        <p>Quem está na comunidade descobre a data, o line-up e a pré-venda antes de todo mundo. Quando a Drop abre, esgota. Não diga que a gente não avisou.</p>
-      </div>
-      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Quero saber primeiro <span class="arr">→</span></a>
-    </div>
-
-    <p class="agenda-note">
-      &gt; A Drop não anuncia data aqui. Tudo sai primeiro na <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="link-wa">comunidade DropLovers</a> e no <a href="https://instagram.com/dropmusicbrasil" target="_blank" rel="noopener" class="link-ig">@dropmusicbrasil</a>.
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     IMPRENSA — onde a Drop já apareceu. Fundo claro (volta o "dia").
-     Cada card é um link real para a matéria.
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="zone zone-day" id="imprensa">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">06 · Imprensa</span>
-      <h2 class="h-sec">A Drop <em>na mídia.</em></h2>
-      <p class="lede">Treze anos de cobertura: de portais especializados à Rede Bahia / Globo e ao portal oficial de turismo de Salvador.</p>
-    </div>
-    <div class="clips reveal">
-      <a class="clip feat" href="https://redeglobo.globo.com/redebahia/tarolando/noticia/drop-music-brasil-acontece-no-dia-158-em-salvador.ghtml" target="_blank" rel="noopener">
-        <span class="clip-src">Rede Bahia · Globo</span>
-        <span class="clip-txt">O maior grupo de comunicação do Brasil</span>
-        <span class="clip-arr">abrir ↗</span>
-      </a>
-      <a class="clip feat" href="https://www.salvadordabahia.com/eventos/drop-music-brasil-brisa-groove-carnaval/" target="_blank" rel="noopener">
-        <span class="clip-src">Salvador da Bahia <em>oficial</em></span>
-        <span class="clip-txt">Portal oficial de turismo de Salvador</span>
-        <span class="clip-arr">abrir ↗</span>
-      </a>
-      <a class="clip" href="http://agendacultural.ba.gov.br/drop-music-brasil/" target="_blank" rel="noopener">
-        <span class="clip-src">Agenda Cultural Bahia</span>
-        <span class="clip-txt">Portal cultural do Governo da Bahia</span>
-        <span class="clip-arr">abrir ↗</span>
-      </a>
-      <a class="clip" href="https://doistercos.com.br/drop-music-brasil-apresenta-groove-infinito-com-estreia-de-nicolau-marinho-no-bombar/" target="_blank" rel="noopener">
-        <span class="clip-src">Dois Terços</span>
-        <span class="clip-txt">Groove Infinito · Nicolau Marinho no Bombar</span>
-        <span class="clip-arr">abrir ↗</span>
-      </a>
-      <a class="clip" href="https://www.uranrodrigues.com/drop-music-brasil-realiza-edicao-ressonancia-progressiva-com-estreia-de-andre-gazolla-no-selo/" target="_blank" rel="noopener">
-        <span class="clip-src">Uran Rodrigues</span>
-        <span class="clip-txt">Ressonância Progressiva · André Gazolla</span>
-        <span class="clip-arr">abrir ↗</span>
-      </a>
-      <a class="clip" href="https://vibes.vc/eventos/drop-music-brasil/" target="_blank" rel="noopener">
-        <span class="clip-src">Vibes · iBahia</span>
-        <span class="clip-txt">Portal líder de eventos em Salvador</span>
-        <span class="clip-arr">abrir ↗</span>
-      </a>
-      <a class="clip" href="http://www.phouse.com.br/drop-music-esta-de-volta-salvador/" target="_blank" rel="noopener">
-        <span class="clip-src">PHouse</span>
-        <span class="clip-txt">"A Drop está de volta a Salvador"</span>
-        <span class="clip-arr">abrir ↗</span>
-      </a>
-      <a class="clip" href="https://ginnolarry.com.br/festa-drop-music-brasil-chega-ao-bombar/" target="_blank" rel="noopener">
-        <span class="clip-src">Ginno Larry</span>
-        <span class="clip-txt">A chegada da Drop ao Bombar</span>
-        <span class="clip-arr">abrir ↗</span>
-      </a>
+    <div class="agenda-cta reveal">
+      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Quero saber em primeira mão <span class="arr">→</span></a>
+      <a href="https://instagram.com/dropmusicbrasil" target="_blank" rel="noopener" class="btn btn-ghost">@dropmusicbrasil</a>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     PARA MARCAS — área comercial enxuta (fundo areia). Sem preços:
-     mostra a oportunidade + o que a marca ganha + botão que pede o deck.
+     B2B / ATALHOS — Imprensa e Para Marcas agora têm páginas próprias.
+     Aqui ficam só dois cartões discretos que levam pra elas.
      ═══════════════════════════════════════════════════════════════ -->
-<section class="zone zone-sand" id="marcas">
+<section class="zone zone-night" id="mais">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">07 · Para marcas</span>
-      <h2 class="h-sec">Patrocinar a Drop não é<br />comprar espaço. <em>É entrar num momento.</em></h2>
-      <p class="lede">Marcas que se associam a experiências culturais autênticas constroem o que mídia paga não replica: memória emocional. A Drop entrega isso de forma recorrente, ao longo de toda a temporada.</p>
-    </div>
-
-    <!-- QUEM FREQUENTA — perfil institucional (defensável, sem dados demográficos não comprovados) -->
-    <div class="audience reveal">
-      <span class="audience-h">Quem frequenta a Drop</span>
-      <div class="audience-grid">
-        <div class="aud"><b>Cena</b><span>público de house music, fiel e recorrente</span></div>
-        <div class="aud"><b>Local</b><span>Salvador e região metropolitana</span></div>
-        <div class="aud"><b>Digital</b><span>alto engajamento e geração de conteúdo</span></div>
-        <div class="aud"><b>Lealdade</b><span>volta a cada edição e traz gente nova</span></div>
-      </div>
-      <p class="audience-note">Um público que valoriza curadoria e experiência acima de hype. Gente que descobre e adota marcas cedo, compartilha o que vive e constrói o boca a boca que nenhuma mídia paga reproduz.</p>
-    </div>
-
-    <div class="brand-grid">
-      <!-- OPORTUNIDADES — formatos concretos de ativação -->
-      <div class="brand-gains reveal">
-        <div class="gain"><span class="gn">01</span><div><h4>Naming rights</h4><p>Sua marca no nome da edição ou do palco. A associação mais forte: a marca vira parte do nome que o público repete.</p></div></div>
-        <div class="gain"><span class="gn">02</span><div><h4>Experiências &amp; ativações</h4><p>Lounge de marca, sampling, bar assinado, espaço instagramável. Contato físico com um público no estado de espírito certo.</p></div></div>
-        <div class="gain"><span class="gn">03</span><div><h4>Conteúdo</h4><p>Produção audiovisual profissional com a marca dentro da cena: fotos, reels e aftermovie que circulam organicamente.</p></div></div>
-        <div class="gain"><span class="gn">04</span><div><h4>Acesso aos DropLovers</h4><p>Presença na comunidade de +18 mil pessoas e na base de e-mail. Canal direto com o público, sem depender de algoritmo.</p></div></div>
-      </div>
-
-      <!-- Citação + cotas (sem valor) + botão que pede o MEDIA KIT -->
-      <aside class="brand-aside reveal">
-        <p class="brand-quote">"A marca não compra exposição. Compra presença dentro de um <em>ritual de verão.</em>"</p>
-        <div class="brand-cotas">
-          Dois formatos de entrada: Cota Headliner (naming &amp; presença total) e Cota Apoio (visibilidade &amp; relacionamento). Valores e entregas <strong>sob consulta</strong>, co-criados com cada marca.
-        </div>
-        <a href="mailto:dropmusicbrazil@gmail.com?subject=Media%20Kit%20%E2%80%94%20Drop%20Music%20Brasil&body=Ol%C3%A1%2C%20Drop!%20Somos%20a%20marca%20_______%20e%20gostar%C3%ADamos%20de%20receber%20o%20media%20kit%20da%20temporada." class="btn btn-solar">Receber o Media Kit <span class="arr">→</span></a>
-      </aside>
+    <div class="b2b-grid reveal">
+      <a class="b2b-card" href="imprensa.html">
+        <span class="b2b-k">Imprensa</span>
+        <span class="b2b-h">A Drop na mídia</span>
+        <span class="b2b-p">Treze anos de cobertura, da Rede Bahia/Globo ao portal oficial de turismo. Clippings, logos e contato de imprensa.</span>
+        <span class="b2b-cta">Ver imprensa →</span>
+      </a>
+      <a class="b2b-card b2b-card-brand" href="marcas.html">
+        <span class="b2b-k">Para marcas</span>
+        <span class="b2b-h">Patrocine a Drop</span>
+        <span class="b2b-p">Quem frequenta, oportunidades de ativação e como sua marca entra na experiência. Solicite o media kit.</span>
+        <span class="b2b-cta">Conhecer oportunidades →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -766,7 +678,7 @@
   <div class="footer">
     <div class="foot-top">
       <div class="foot-brand">
-        <img src="assets/lockup-white.png" alt="Drop Music Brasil" class="foot-lockup" />
+        <img src="assets/lockup-white.png" alt="Drop Music Brasil" class="foot-lockup" style="margin: 0px 0px 11px" />
         <p class="foot-tag">Da Bahia pro Mundo. A frequência continua.</p>
       </div>
       <div class="foot-col">
@@ -774,8 +686,8 @@
         <a href="#manifesto">Manifesto</a>
         <a href="#historia">História</a>
         <a href="#agenda">Agenda</a>
-        <a href="#imprensa">Imprensa</a>
-        <a href="#marcas">Para marcas</a>
+        <a href="imprensa.html">Imprensa</a>
+        <a href="marcas.html">Para marcas</a>
       </div>
       <div class="foot-col">
         <span class="fh">Conectar</span>

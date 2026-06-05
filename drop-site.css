@@ -157,7 +157,8 @@ img { display: block; max-width: 100%; }
   padding-top: 12px; padding-bottom: 12px;
 }
 .nav-logo { display: inline-flex; align-items: center; gap: 11px; }
-.nav-logo img { height: 22px; width: auto; transition: transform .3s; }
+.nav-logo img { height: 38px; width: auto; transition: transform .3s; }
+.nav.scrolled .nav-logo img { height: 32px; }
 .nav-lockup { display: block; }
 .nav-logo:hover img { transform: scale(1.06); }
 /* nome da marca em texto (fica oculto visualmente — o lockup já mostra; serve pro Google/leitor de tela) */
@@ -372,6 +373,36 @@ body.nav-open { overflow: hidden; }
 .tl-item::before { content: ""; position: absolute; left: 110px; top: 30px; width: 13px; height: 13px; border-radius: 50%; background: var(--night); border: 1px solid var(--blue-glow); }
 .tl-current::before { background: var(--blue-glow); box-shadow: 0 0 18px var(--blue-glow); animation: blink 1.8s ease-in-out infinite; }
 @keyframes blink { 50% { opacity: .45; } }
+
+/* TIMELINE HORIZONTAL (desktop): trilho que rola de lado, com linha no topo.
+   No mobile vira vertical de novo (media query mais abaixo). */
+@media (min-width: 901px) {
+  .tl {
+    display: flex; flex-wrap: nowrap;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: 40px 0 28px;
+    margin-top: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule-l-s) transparent;
+  }
+  .tl::before { left: 0; right: 0; top: 46px; bottom: auto; width: auto; height: 1px; }
+  .tl-item {
+    display: block; grid-template-columns: none;
+    flex: 0 0 300px; width: 300px;
+    gap: 0; padding: 0 28px 0 0; scroll-snap-align: start;
+  }
+  .tl-item::before { left: 0; top: 40px; }
+  .tl-yr { text-align: left; padding-top: 0; margin-bottom: 30px; }
+  .tl-body { padding-left: 0; padding-top: 26px; }
+  .tl-desc { max-width: none; font-size: 14px; }
+  .tl-cap { display: block; margin-top: 14px; font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--light-mute); }
+}
+.tl-scroll-hint { display: none; }
+@media (min-width: 901px) {
+  .tl-scroll-hint { display: block; margin-top: 14px; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; color: var(--light-mute); }
+}
 .tl-yr { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.4vw, 32px); letter-spacing: -0.02em; text-align: right; line-height: 1; padding-top: 22px; color: var(--light); }
 .tl-current .tl-yr { color: var(--blue-glow); }
 .tl-body { padding-left: 38px; }
@@ -579,6 +610,28 @@ body.nav-open { overflow: hidden; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .marquee-track, .tl-current::before, .am-badge i { animation: none; } }
+
+.agenda-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+
+/* Subpáginas (imprensa / marcas): espaço sob o menu fixo + link de voltar */
+.subpage .subhead { padding-top: clamp(120px, 16vh, 180px); }
+.subpage .subhero { min-height: 78svh; }
+.back-link { display: inline-block; margin-bottom: 20px; font-family: var(--mono); font-size: 12px; letter-spacing: .04em; color: var(--light-dim); transition: color .2s; }
+.back-link:hover { color: var(--light); }
+.hero-inner .back-link { color: var(--light-dim); }
+
+/* B2B atalhos (home) */
+.b2b-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+@media (max-width: 760px) { .b2b-grid { grid-template-columns: 1fr; } }
+.b2b-card { display: flex; flex-direction: column; gap: 10px; padding: clamp(28px,4vw,44px); background: var(--night-2); border: 1px solid var(--rule-l); transition: background .2s, border-color .2s, transform .2s; }
+.b2b-card:hover { background: rgba(46,91,255,.06); border-color: rgba(91,134,255,.4); transform: translateY(-2px); }
+.b2b-card-brand { background: radial-gradient(ellipse 90% 100% at 100% 0%, rgba(239,143,60,.14) 0%, transparent 60%), var(--night-2); }
+.b2b-k { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--blue-glow); }
+.b2b-card-brand .b2b-k { color: var(--gold); }
+.b2b-h { font-family: var(--display); font-weight: 800; font-size: clamp(24px,2.8vw,36px); letter-spacing: -0.03em; line-height: 1; }
+.b2b-p { font-size: 14px; color: var(--light-dim); line-height: 1.55; max-width: 44ch; }
+.b2b-cta { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; color: var(--blue-glow); margin-top: 4px; }
+.b2b-card-brand .b2b-cta { color: var(--gold); }
 
 /* section hide via tweaks */
 [data-hide-quem="true"] #quem,
