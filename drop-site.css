@@ -219,6 +219,7 @@ body.nav-open { overflow: hidden; }
   background: var(--night);
 }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-vid { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; object-position: center 46%; filter: saturate(1.08) contrast(1.02); }
 .hero-bg img {
   width: 100%; height: 100%; object-fit: cover; object-position: center 46%;
   filter: saturate(1.08) contrast(1.02);
@@ -240,12 +241,13 @@ body.nav-open { overflow: hidden; }
 }
 .hero-meta b { color: var(--light); font-weight: 500; }
 .hero-h {
-  font-family: var(--display); font-weight: 800;
-  font-size: clamp(56px, 13vw, 188px);
-  line-height: 0.86; letter-spacing: -0.04em;
-  color: var(--light);
-  text-shadow: 0 6px 60px rgba(0,0,0,.4);
-  margin-bottom: 28px;
+  font-family: 'Anton', var(--display), sans-serif; font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(54px, 12.5vw, 178px);
+  line-height: 0.88; letter-spacing: 0;
+  color: #2fcccd;
+  text-shadow: 0 4px 40px rgba(0,0,0,.55), 0 2px 12px rgba(0,0,0,.4);
+  margin-bottom: 18px;
 }
 .hero-brand {
   display: block;
@@ -255,10 +257,16 @@ body.nav-open { overflow: hidden; }
   color: var(--gold);
   margin-bottom: clamp(14px, 2vh, 26px);
 }
+.hero-live { display: inline-flex; align-items: center; gap: 8px; color: #6fe0dd !important; border-color: rgba(111,224,221,.42) !important; }
+.hero-live i { width: 7px; height: 7px; border-radius: 50%; background: #33cccf; box-shadow: 0 0 10px #33cccf; animation: blink 1.6s ease-in-out infinite; }
 .hero-h em {
   font-family: var(--serif); font-weight: 400; font-style: italic;
-  letter-spacing: -0.01em; color: var(--gold);
+  text-transform: none;
+  letter-spacing: -0.01em; color: #bdece9;
 }
+.hero-date { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-family: var(--mono); font-size: clamp(13px, 1.5vw, 16px); letter-spacing: .03em; color: var(--light); margin-bottom: 24px; }
+.hero-date b { font-weight: 500; }
+.hero-date .sep { color: #33cccf; }
 .hero-sub {
   font-size: clamp(16px, 1.6vw, 20px); line-height: 1.5;
   max-width: 52ch; color: var(--light-dim); margin-bottom: 36px;
@@ -694,6 +702,16 @@ body.nav-open { overflow: hidden; }
 .as-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--blue-glow); box-shadow: 0 0 10px var(--blue-glow); flex: none; animation: blink 1.8s ease-in-out infinite; }
 .as-text { font-family: var(--mono); font-size: 13px; letter-spacing: .02em; color: var(--light-dim); line-height: 1.5; }
 .agenda-status .as-text strong { color: var(--light); font-weight: 600; }
+.agenda-event { display: grid; grid-template-columns: auto 1fr; gap: clamp(18px,3vw,32px); align-items: center; padding: clamp(22px,3vw,34px); margin-bottom: 32px; border-radius: 14px; border: 1px solid rgba(245,149,61,.32); background: radial-gradient(ellipse 90% 130% at 0% 0%, rgba(245,149,61,.14) 0%, transparent 62%), var(--night-2); }
+@media (max-width: 620px) { .agenda-event { grid-template-columns: 1fr; gap: 16px; } }
+.ae-date { display: flex; flex-direction: column; align-items: center; justify-content: center; width: clamp(84px,10vw,104px); aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--rule-l); background: rgba(6,8,16,.55); }
+.ae-day { font-family: var(--display); font-weight: 800; font-size: clamp(38px,5vw,52px); line-height: .9; color: var(--gold); }
+.ae-mon { font-family: var(--mono); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--light-dim); margin-top: 6px; }
+.ae-tag { display: inline-flex; align-items: center; gap: 9px; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.ae-live { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 10px var(--gold); animation: blink 1.6s ease-in-out infinite; }
+.ae-title { font-family: var(--display); font-weight: 800; font-size: clamp(24px,3vw,38px); letter-spacing: -0.03em; line-height: 1.02; margin-bottom: 8px; }
+.ae-meta { font-family: var(--mono); font-size: 13px; letter-spacing: .02em; color: var(--light); margin-bottom: 8px; }
+.ae-note { font-size: 15px; color: var(--light-dim); max-width: 60ch; line-height: 1.55; }
 .agenda-note { margin-top: 32px; font-family: var(--mono); font-size: 13px; color: var(--light-dim); line-height: 1.6; }
 .agenda-note .link-wa { color: #25D366; border-bottom: 1px solid currentColor; }
 .agenda-note .link-ig { color: var(--blue-glow); border-bottom: 1px solid currentColor; }
@@ -710,6 +728,12 @@ body.nav-open { overflow: hidden; }
 .heart-card-crowd .heart-role { color: var(--gold); }
 .heart-name { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.2vw, 30px); letter-spacing: -0.02em; color: var(--light); line-height: 1; }
 .heart-note { font-size: 13px; color: var(--light-dim); line-height: 1.45; margin-top: 4px; }
+
+/* ───── Teaser de lançamento com foto de fundo (comunicação 360) ───── */
+.zone-launch { position: relative; isolation: isolate; overflow: hidden; }
+.zone-launch::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url("assets/p/loro-launch.jpg") center 28% / cover no-repeat; }
+.zone-launch-vid { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }.zone-launch::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(6,8,16,.72) 0%, rgba(6,8,16,.6) 50%, rgba(6,8,16,.82) 100%); }
+.zone-launch .fomo { background: radial-gradient(ellipse 80% 120% at 0% 0%, rgba(46,91,255,.22) 0%, transparent 60%), rgba(6,8,16,.55); backdrop-filter: blur(3px); border-color: rgba(255,198,110,.34); }
 
 /* ───── AGENDA · teaser FOMO ───── */
 .fomo { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center;

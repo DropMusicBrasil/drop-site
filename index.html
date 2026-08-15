@@ -87,15 +87,22 @@
 {
   "@context": "https://schema.org",
   "@type": "MusicEvent",
-  "name": "Drop no Lôro · Ciclo Solar",
-  "description": "Day party de house music da Drop Music Brasil à beira-mar, na Barraca do Lôro, em Stella Maris, Salvador.",
-  "startDate": "2026-07",
+  "name": "Drop no Lôro · Summer Opening",
+  "description": "Abertura da temporada solar 2026 da Drop Music Brasil. Day party de house music no Rooftop do Lôro, em Stella Maris, Salvador.",
+  "startDate": "2026-09-12",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
     "@type": "Place",
-    "name": "Barraca do Lôro",
+    "name": "Rooftop do Lôro",
     "address": { "@type": "PostalAddress", "addressLocality": "Salvador", "addressRegion": "BA", "addressCountry": "BR" }
+  },
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "url": "https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX",
+    "validFrom": "2026-08-19T00:00:00-03:00",
+    "priceCurrency": "BRL"
   },
   "performer": [
     { "@type": "MusicGroup", "name": "Avinho AP" },
@@ -110,7 +117,7 @@
 <!-- Fontes do Google: Syne (títulos), Instrument Serif (itálico de ênfase), Geist (texto), Geist Mono (etiquetas técnicas) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <!-- Folha de estilo: TODA a aparência do site está no arquivo abaixo -->
 <link rel="stylesheet" href="drop-site.css" />
@@ -164,28 +171,29 @@
      com o título gigante "Da Bahia pro Mundo" e 3 botões de ação.
      ═══════════════════════════════════════════════════════════════ -->
 <header class="hero" id="top">
-  <!-- Foto de fundo do hero (troque o arquivo aqui se quiser outra capa) -->
-  <div class="hero-bg"><img src="assets/p/new-solar-djs.jpg" alt="DJs da Drop Music Brasil tocando à beira-mar no Lôro, Salvador, com céu azul e o mar ao fundo" fetchpriority="high" /></div>
+  <!-- Vídeo de fundo do hero (mudo, em loop). A foto serve de poster/fallback. -->
+  <div class="hero-bg">
+    <video class="hero-vid" autoplay muted loop playsinline preload="metadata" poster="assets/p/new-solar-djs.jpg">
+      <source src="assets/montagem_1.mp4" type="video/mp4" />
+    </video>
+    <img src="assets/p/new-solar-djs.jpg" alt="DJs da Drop Music Brasil tocando à beira-mar no Lôro, Salvador, com céu azul e o mar ao fundo" fetchpriority="high" />
+  </div>
   <!-- Camada escura por cima da foto, pra deixar o texto legível -->
   <div class="hero-scrim"></div>
   <div class="hero-inner">
-    <!-- Etiquetas pequenas (cidade, ano, gênero) -->
+    <!-- Etiquetas: sinaliza pré-venda + temporada -->
     <div class="hero-meta">
-      <span><b>Salvador · BA</b></span>
-      <span>Desde <b>2013</b></span>
-      <span><b>House Music</b> &amp; cultura eletrônica</span>
+      <span class="hero-live"><i></i> Pré-venda aberta</span>
+      <span><b>Temporada 2026</b></span>
+      <span>Salvador · <b>BA</b></span>
     </div>
-    <!-- Nome da marca como TEXTO REAL (importante pro Google) + título visual -->
-    <h1 class="hero-h"><span class="hero-brand">Drop Music Brasil</span>Da Bahia<br /><em>pro Mundo.</em></h1>
-    <p class="hero-sub">
-      <strong>Drop Music Brasil</strong> é uma plataforma cultural de <strong>house music</strong> fundada em Salvador em 2013.
-      Do sol da beira-mar à escuridão do club. <em>Mais que uma festa, uma frequência</em>.
-    </p>
-    <!-- Botões: público (drops / comunidade) e marcas -->
+    <!-- H1: nome da marca (texto real p/ SEO) + headline da temporada -->
+    <h1 class="hero-h"><span class="hero-brand">Drop Music Brasil · Summer Opening</span>Summer<br />Opening <em>no Lôro.</em></h1>
+    <p class="hero-date"><b>Sábado, 12 de setembro</b> <span class="sep">·</span> Rooftop do Lôro <span class="sep">·</span> Stella Maris, Salvador</p>
+    <p class="hero-sub">A abertura da temporada solar da Drop. <em>Da Bahia pro Mundo</em> — e a pré-venda já começou, em primeira mão e exclusiva pra comunidade DropLovers.</p>
     <div class="hero-ctas">
-      <a href="#agenda" class="btn btn-primary">Próximos drops <span class="arr">→</span></a>
-      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Entrar na comunidade <span class="arr">→</span></a>
-      <a href="#marcas" class="btn btn-ghost">Para marcas</a>
+      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-primary">Garantir meu ingresso <span class="arr">→</span></a>
+      <a href="temporada.html" class="btn btn-ghost">A temporada</a>
     </div>
   </div>
 </header>
@@ -194,15 +202,15 @@
      TEASER (logo após o hero) — bloco de suspense + CTA pra comunidade.
      Cria FOMO sem revelar data nem venue. Empurra pro WhatsApp.
      ═══════════════════════════════════════════════════════════════ -->
-<div class="zone zone-deep">
+<div class="zone zone-deep zone-launch">
   <div class="wrap" style="padding-top: clamp(48px,6vh,80px); padding-bottom: clamp(48px,6vh,80px);">
     <div class="fomo reveal">
       <div class="fomo-main">
-        <span class="fomo-kicker"><span class="fomo-dot"></span> Próximo drop · em segredo</span>
-        <h3 class="fomo-h">Algo está sendo construído<br />para o <em>verão.</em></h3>
-        <p>Quem está na comunidade descobre a data, o line-up e a pré-venda antes de todo mundo. Quando a Drop abre, esgota. Não diga que a gente não avisou.</p>
+        <span class="fomo-kicker"><span class="fomo-dot"></span> Temporada 2026 · pré-venda aberta</span>
+        <h3 class="fomo-h">O verão abre com<br /><em>Summer Opening.</em></h3>
+        <p><strong>12 de setembro · Rooftop do Lôro · Stella Maris.</strong> A abertura da temporada solar já tem data. A pré-venda está rolando em primeira mão, exclusiva para a comunidade DropLovers — quando a Drop abre, esgota.</p>
       </div>
-      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Quero saber primeiro <span class="arr">→</span></a>
+      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Garantir meu ingresso <span class="arr">→</span></a>
     </div>
   </div>
 </div>
@@ -554,14 +562,22 @@
       <p class="lede">A Drop pensa em calendário. Do ciclo noturno no club ao ciclo solar no Lôro, a marca acompanha o ano inteiro, com o verão como ponto alto.</p>
     </div>
 
-    <!-- Status da agenda: em construção (sem revelar nada de venue/datas) -->
-    <div class="agenda-status reveal">
-      <span class="as-dot"></span>
-      <span class="as-text">Fizemos um primeiro semestre <strong>memorável</strong>. Agora estamos preparando algo sensacional para o próximo. Em breve, novidades na mesma frequência.</span>
+    <!-- Primeira edição confirmada da temporada 2026 -->
+    <div class="agenda-event reveal">
+      <div class="ae-date">
+        <span class="ae-day">12</span>
+        <span class="ae-mon">SET</span>
+      </div>
+      <div class="ae-body">
+        <span class="ae-tag"><span class="ae-live"></span> Pré-venda aberta · Temporada 2026</span>
+        <h3 class="ae-title">Summer Opening · Drop no Lôro</h3>
+        <p class="ae-meta">Sábado, 12 de setembro · Rooftop do Lôro · Stella Maris, Salvador</p>
+        <p class="ae-note">A abertura do ciclo solar. Pré-venda em primeira mão, exclusiva para a comunidade DropLovers — o link do lote está lá dentro.</p>
+      </div>
     </div>
 
     <div class="agenda-cta reveal">
-      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Quero saber em primeira mão <span class="arr">→</span></a>
+      <a href="https://chat.whatsapp.com/C65rE5MnoBX2drvaWDt5QX" target="_blank" rel="noopener" class="btn btn-wa">Entrar e garantir ingresso <span class="arr">→</span></a>
       <a href="https://instagram.com/dropmusicbrasil" target="_blank" rel="noopener" class="btn btn-ghost">@dropmusicbrasil</a>
     </div>
   </div>
@@ -640,12 +656,12 @@
       <h2 class="h-sec">Booking, parcerias<br />&amp; <em>imprensa.</em></h2>
     </div>
     <div class="contact-grid reveal">
-      <a class="cc" href="/cdn-cgi/l/email-protection#87e3f5e8f7eaf2f4eee4e5f5e6fdeeebc7e0eae6eeeba9e4e8eab8f4f2e5ede2e4f3bac5e8e8eceee9e0a2b5b7a2c2b5a2bfb7a2beb3a2b5b7c3f5e8f7a2b5b7caf2f4eee4a2b5b7c5f5e6f4eeeb">
+      <a class="cc" href="mailto:dropmusicbrazil@gmail.com?subject=Booking%20%E2%80%94%20Drop%20Music%20Brasil">
         <span class="cc-k">Booking &amp; geral</span>
-        <span class="cc-v"><span class="__cf_email__" data-cfemail="8beff9e4fbe6fef8e2e8e9f9eaf1e2e7cbece6eae2e7a5e8e4e6">[email&#160;protected]</span></span>
+        <span class="cc-v">dropmusicbrazil@gmail.com</span>
         <span class="cc-arr">→</span>
       </a>
-      <a class="cc" href="/cdn-cgi/l/email-protection#096d7b6679647c7a606a6b7b68736065496e64686065276a6664367a7c6b636c6a7d344064797b6c677a682c3b392c4c3b2c31392c303d2c3b394d7b66792c3b39447c7a606a2c3b394b7b687a6065">
+      <a class="cc" href="mailto:dropmusicbrazil@gmail.com?subject=Imprensa%20%E2%80%94%20Drop%20Music%20Brasil">
         <span class="cc-k">Imprensa &amp; press kit</span>
         <span class="cc-v">Solicitar material</span>
         <span class="cc-arr">→</span>
@@ -711,7 +727,7 @@
 <div id="tweaks-root"></div>
 
 <!-- ═══ Pequenos scripts: (1) fundo do menu ao rolar; (2) animação de "surgir" das seções ═══ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   (function () {
     var nav = document.getElementById('nav');
     var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 40); };
