@@ -243,9 +243,9 @@ body.nav-open { overflow: hidden; }
 .hero-h {
   font-family: 'Anton', var(--display), sans-serif; font-weight: 400;
   text-transform: uppercase;
-  font-size: clamp(54px, 12.5vw, 178px);
+  font-size: clamp(44px, 11.5vw, 178px);
   line-height: 0.88; letter-spacing: 0;
-  color: #2fcccd;
+  color: #ffffff;
   text-shadow: 0 4px 40px rgba(0,0,0,.55), 0 2px 12px rgba(0,0,0,.4);
   margin-bottom: 18px;
 }
@@ -264,6 +264,7 @@ body.nav-open { overflow: hidden; }
   text-transform: none;
   letter-spacing: -0.01em; color: #bdece9;
 }
+.hero-h em.hero-script { display: block; font-size: .5em; line-height: 1; margin-top: .06em; letter-spacing: 0; }
 .hero-date { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-family: var(--mono); font-size: clamp(13px, 1.5vw, 16px); letter-spacing: .03em; color: var(--light); margin-bottom: 24px; }
 .hero-date b { font-weight: 500; }
 .hero-date .sep { color: #33cccf; }
