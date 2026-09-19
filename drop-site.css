@@ -257,17 +257,17 @@ body.nav-open { overflow: hidden; }
   color: var(--gold);
   margin-bottom: clamp(14px, 2vh, 26px);
 }
-.hero-live { display: inline-flex; align-items: center; gap: 8px; color: #6fe0dd !important; border-color: rgba(111,224,221,.42) !important; }
-.hero-live i { width: 7px; height: 7px; border-radius: 50%; background: #33cccf; box-shadow: 0 0 10px #33cccf; animation: blink 1.6s ease-in-out infinite; }
+.hero-live { display: inline-flex; align-items: center; gap: 8px; color: #f1d2aa !important; border-color: rgba(241,210,170,.45) !important; }
+.hero-live i { width: 7px; height: 7px; border-radius: 50%; background: #ffd08a; box-shadow: 0 0 10px #ffd08a; animation: blink 1.6s ease-in-out infinite; }
 .hero-h em {
   font-family: var(--serif); font-weight: 400; font-style: italic;
   text-transform: none;
-  letter-spacing: -0.01em; color: #bdece9;
+  letter-spacing: -0.01em; color: #ffefcb;
 }
 .hero-h em.hero-script { display: block; font-size: .5em; line-height: 1; margin-top: .06em; letter-spacing: 0; }
 .hero-date { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-family: var(--mono); font-size: clamp(13px, 1.5vw, 16px); letter-spacing: .03em; color: var(--light); margin-bottom: 24px; }
 .hero-date b { font-weight: 500; }
-.hero-date .sep { color: #33cccf; }
+.hero-date .sep { color: #ffd08a; }
 .hero-sub {
   font-size: clamp(16px, 1.6vw, 20px); line-height: 1.5;
   max-width: 52ch; color: var(--light-dim); margin-bottom: 36px;
